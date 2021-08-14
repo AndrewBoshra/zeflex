@@ -1,0 +1,9 @@
+.review-stars {
+    display: flex;
+    
+    .active {
+        * {
+            color: gold;
+        }
+    }
+}

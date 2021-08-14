@@ -1,0 +1,113 @@
+.filter-icon {
+    z-index: 5;
+    position: fixed;
+    top: 87px;
+    right: 10px;
+    transform: translate(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 50%;
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+    &:hover {
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        cursor: pointer;
+    }
+}
+
+.drawer {
+    //positioning
+    position: fixed;
+    right: 0;
+    top: var(--nav-height);
+    height: 100vh;
+    width: 260px;
+    z-index: 4;
+    background-color: var(--main-color);
+    //animation
+    transition-duration: 0.7s;
+    transition-property: right;
+
+    //style
+    border-left: 1px solid var(--des-sec-color);
+    padding: 15px;
+    font-size: smaller;
+    &.hidden {
+        right: -301px;
+    }
+    h3 {
+        margin: 4px 0px;
+    }
+    .drawer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        .genre-container {
+            background-color: var(--main-lighter-color);
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5px;
+            border-radius: 5px;
+            .genre {
+                cursor: pointer;
+                padding: 5px;
+                margin: 5px;
+                border: 1px solid white;
+                border-radius: 5px;
+                text-transform: capitalize;
+                &.selected {
+                    background-color: var(--sec-color);
+                }
+            }
+        }
+        
+    }
+    button{
+        align-self: center;
+        margin: 8px 0px 30px;
+    }
+}
+
+.movie-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    justify-content: space-around;
+    height: max-content;
+    margin-bottom: 100px;
+    &>a{
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    h3{
+        cursor: pointer;
+    }
+}
+
+.notfound{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

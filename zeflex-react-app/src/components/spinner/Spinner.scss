@@ -1,0 +1,25 @@
+.loader {
+    border: 10px solid var(--main-lighter-color); /* Light grey */
+    border-top: 10px solid var(--sec-color); /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1.5s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.loader-wrapper {
+    background: var(--main-color);
+    height: 100vh;
+    position: relative;
+}
+@keyframes spin {
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg) ;
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg) ;
+    }
+}

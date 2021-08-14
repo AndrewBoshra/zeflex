@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+.movie {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    .movie-details {
+        width: 80vw;
+        h1 {
+            text-transform: capitalize;
+        }
+        max-width: 500px;
+        margin-bottom: 50px;
+    }
+}
+.review-imdb {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    img {
+        width: 50px;
+        transform: translateY(50%);
+    }
+}
+.genres {
+    span {
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    margin-bottom: 10px;
+}
+.review {
+    display: flex;
+    cursor: pointer;
+
+    .review-count {
+        color: gold;
+    }
+    p {
+        transform: translateY(20%);
+    }
+    .badge {
+        height: 20px;
+        color: black;
+        margin-right: 5px;
+    }
+}
+
+.videos {
+    width: 100vw;
+    transform: translateX(-6vw);
+    position: fixed;
+    bottom: 10vh;
+}
+
+.tagline {
+    font-style: italic;
+}
+
+// @media (min-width: 768px) {
+.movie-reviews {
+    background-color: var(--main-lighter-color);
+    padding: 20px;
+    max-width: 88vw;
+    max-height: 300px;
+    overflow-y: scroll;
+    resize: horizontal;
+    border-radius: 8px;
+    .movie-review-input {
+        display: flex;
+        justify-content: space-between;
+        .review-input {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            textarea {
+                background-color: var(--main-lighter-color);
+                margin: 0 0 15px 15px;
+                border-radius: 5px;
+                resize: none;
+                padding: 5px;
+                height: 100%;
+            }
+            button{
+                width: fit-content;
+                align-self: flex-end;
+            }
+        }
+    }
+
+    .movie-review {
+        padding: 20px;
+        text-transform: capitalize;
+        display: flex;
+        justify-content: space-between;
+        .right {
+            flex: 1;
+            display: flex;
+            .icon {
+                cursor: pointer;
+            }
+            .review-stars-table {
+                min-width: fit-content;
+            }
+        }
+        .review-comment {
+            flex: 1;
+            margin-bottom: 8px;
+            margin-right: 20px;
+        }
+    }
+}
+// }
+
+@media only screen and (max-width: 768px) {
+    .movie-reviews {
+        .movie-review {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}

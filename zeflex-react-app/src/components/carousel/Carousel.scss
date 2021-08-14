@@ -1,0 +1,32 @@
+
+.carousel{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .icon{
+        z-index: 5;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.4);
+        font-size: 50px;
+        height: 100%;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.6);
+            
+        }
+        &.right{
+            right:0;
+        }
+        &.left{
+            left:0;
+        }
+    }
+    .carousel-wrapper{
+        display: flex;
+        width: max-content;
+        .carousel-card {
+            margin-right: 10px;
+        }
+        transition-duration: .5s;
+    }
+}

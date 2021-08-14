@@ -1,0 +1,102 @@
+#backdrop-img {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    img{
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    &::after {
+        content: "";
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.747);
+        background-image: radial-gradient(circle, transparent, black 200%);
+    }
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    .input-container {
+        background-color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        overflow: hidden;
+        .form-selector {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .form {
+                border-radius: inherit;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 50px;
+                cursor: pointer;
+                &:hover{
+
+                    background-color: rgb(41, 41, 41);
+                }
+                &.selected {
+                    background-color: var(--sec-color);
+                }
+            }
+        }
+
+        .form-data {
+            margin: 40px 30px 25px ;
+            max-width: 450px;
+            .form-inputs {
+                .form-input {
+                    margin-bottom: 40px;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    background-color: rgb(29, 29, 29);
+                    border-radius: 5px;
+
+                    .icon {
+                        margin: 0px 10px;
+                    }
+                    input {
+                        background-color: transparent;
+                        border: 0;
+                        width: 100%;
+                        height: 50px;
+                        font-size: 15px;
+                        color: white;
+                    }
+
+                    span{
+                        color: red;
+                        position: absolute;
+                        transform: translateY(calc(100% + 16px));
+                        font-size: 14px;
+                    }
+                }
+            }
+            .form-actions {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                p{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

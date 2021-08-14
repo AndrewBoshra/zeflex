@@ -1,0 +1,74 @@
+@keyframes scaleX {
+    from{
+        width: 0;
+    }
+    to{
+        width: 200px;
+    }
+}
+.nav {
+    
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--main-color);
+    
+    .nav-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 15px;
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            .nav-logo {
+                margin: 0 20px;
+            }
+            .nav-items {
+                display: flex;
+                .nav-item {
+                    cursor: pointer;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .right {
+            * {
+                margin-right: 15px;
+            }
+            display: flex;
+            .icon {
+                cursor: pointer;
+            }
+            .search {
+                background-color: var(--main-color);
+                padding: 0px 15px;
+                display: flex;
+                input {
+                    display: none;
+                    width: 0px;
+                    
+                }
+                &:hover {
+                    position: absolute;
+                    transform: translateX(-70%);
+                    input {
+                        background-color: var(--main-lighter-color);
+                        color: white;
+                        border-radius: 3px;
+                        padding: 5px 10px;
+                        border: 1px ;
+                        display: inline;
+                        width: 200px;
+                        animation-duration: .8s;
+                        animation-name: scaleX;
+                    }
+                }
+            }
+        }
+    }
+}
