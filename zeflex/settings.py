@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import django_heroku 
-import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -85,23 +84,10 @@ WSGI_APPLICATION = 'zeflex.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-
     'default': {
-
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-        'NAME': 'dcqv5i9d1o31t9',
-
-        'USER': 'wwvzlydsreioso',
-
-        'PASSWORD': '1e90bfa633153f9193ce8c3e391bdfce16057ce83a8bb3d85a1dfa87116566af',
-
-        'HOST': 'ec2-34-194-130-103.compute-1.amazonaws.com',
-
-        'PORT': '5432',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-
 }
 
 # Password validation
