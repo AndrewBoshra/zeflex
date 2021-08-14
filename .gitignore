@@ -4,4 +4,4 @@
 *.pyc
 __pycache__/
 
-/zeflex-react-app/node_modules
+/node_modules

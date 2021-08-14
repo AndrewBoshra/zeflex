@@ -26,8 +26,7 @@ SECRET_KEY = 'u4$lqvzb&@@e)j(6=ufo+awzdb+mb5lwbebo9s&#m1@_a2nops'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    '*'
+    'zeflex.herokuapp.com',
 ]
 
 
@@ -127,8 +126,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATICFILES_DIRS=[
-           os.path.join(BASE_DIR , 'zeflex-react-app/build/static')
+           os.path.join(BASE_DIR , 'build/static')
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
