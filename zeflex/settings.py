@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'u4$lqvzb&@@e)j(6=ufo+awzdb+mb5lwbebo9s&#m1@_a2nops'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'zeflex.herokuapp.com',
