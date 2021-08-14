@@ -1,5 +1,6 @@
 {
   "name": "zeflex-react-app",
+  "homepage": "https://zeflex.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
