@@ -1,6 +1,9 @@
 # Zeflex 
 _**Zeflex**_ is a website application inspired from _**Netflix**_ that allows users to Search for Movies, See Movie's Description, Review Movies and more.
 
+
+### **You can See it live  [here](http://zeflex.herokuapp.com/)**
+
 # More About Zeflex Functionalities
 
 1. Auth
@@ -42,10 +45,9 @@ It allows two type of authentication :
 
 ### Files
 * SQL DB : i have attachd a sqlite db that i've populated from https://developers.themoviedb.org/  (this file is optional though)
-* #### zeflex-react-app : front end application
-* ##### zeflex-react-app\build 
+* * ##### build 
 the actual files that is rendered by django server
-* ##### zeflex-react-app\src
+* ##### src
 includes the react app code Folder Structure:
 * api_interface js file that is responsible for fething data from the backend
 * Components,Screens folders containing the react components , screens each one has a js file and scss file
