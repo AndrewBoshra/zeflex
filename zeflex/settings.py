@@ -21,13 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'u4$lqvzb&@@e)j(6=ufo+awzdb+mb5lwbebo9s&#m1@_a2nops'
+SECRET_KEY = os.environ.get('SECRET_KEY', default='u4$lqvzb&@@e)j(6=ufo+awzdb+mb5lwbebo9s&#m1@_a2nops')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['127.0.0.1',
-    'zeflex.onrender.com',]
+ALLOWED_HOSTS = ['127.0.0.1','localhost','0.0.0.0']
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
@@ -131,7 +133,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
            os.path.join(BASE_DIR , 'build/static')
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+if not DEBUG:    
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [

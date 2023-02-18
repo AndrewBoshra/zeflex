@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: zeflex
+    env: python
+    buildCommand: "./predeploy.sh"
+    startCommand: "gunicorn zeflex.wsgi:application"
