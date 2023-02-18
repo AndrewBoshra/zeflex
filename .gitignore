@@ -6,3 +6,7 @@ __pycache__/
 
 /node_modules
 /build
+
+/venv
+
+db.sqlite3

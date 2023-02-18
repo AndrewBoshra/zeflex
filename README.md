@@ -8,27 +8,27 @@ _**Zeflex**_ is a website application inspired from _**Netflix**_ that allows us
 
 1. Auth
 * User Must login to be able to review movies
-![Auth Page](https://github.com/me50/AndrewBoshra/blob/web50/projects/2020/x/capstone/ScreenShots/login.png)
+![Auth Page](ScreenShots/login.png)
 
 
 2- Discover
 * Allows User to discover random movies that changes every time the user visits the page
-![Discover Page](https://github.com/me50/AndrewBoshra/blob/web50/projects/2020/x/capstone/ScreenShots/discover.jpg)
+![Discover Page](ScreenShots/discover.jpg)
 
 3- Search
 * Allows User to Search for a specific Movie 
 * User can filter the result either by the release date , for kids , genre( can be more than one) or any combination of those
-![Movies Page](https://github.com/me50/AndrewBoshra/blob/web50/projects/2020/x/capstone/ScreenShots/home%20%2B%20drawer.jpg)
+![Movies Page](ScreenShots/home%20%2B%20drawer.jpg)
 
 4- Movie Page 
 * Allows users to see more details about a movie like language, genres,overview ,reviews ,videos,....
 * User Can review a movie for **ONE TIME ONLY**
-![Movie Page](https://github.com/me50/AndrewBoshra/blob/web50/projects/2020/x/capstone/ScreenShots/movie%20page.jpg)
-![Movie Page](https://github.com/me50/AndrewBoshra/blob/web50/projects/2020/x/capstone/ScreenShots/review.png)
+![Movie Page](ScreenShots/movie%20page.jpg)
+![Movie Page](ScreenShots/review.png)
 
 5- Admin Page
 * Allows admins to create and edit movies,genres,users 
-* ![Admin Page](https://github.com/me50/AndrewBoshra/blob/web50/projects/2020/x/capstone/ScreenShots/adminpage.png)
+* ![Admin Page](ScreenShots/adminpage.png)
 
 ## Architecture
 Zeflex uses **Django Rest Framework** for backend and **React** for front end.   
