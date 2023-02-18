@@ -2,7 +2,7 @@
 _**Zeflex**_ is a website application inspired from _**Netflix**_ that allows users to Search for Movies, See Movie's Description, Review Movies and more.
 
 
-### **You can See it live  [here](http://zeflex.herokuapp.com/)**
+### **You can See it live  [here](http://zeflex.onrender.com/)**
 
 # More About Zeflex Functionalities
 
